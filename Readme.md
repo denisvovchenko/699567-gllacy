@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Денис Вовченко](https://up.htmlacademy.ru/htmlcss/21/user/699567).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Фарига](https://htmlacademy.ru/profile/maximfariga).
 
 ---
 
