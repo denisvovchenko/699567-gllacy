@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+   <!-- Header -->
+
+		<header class="main-header">
+
+
+	  	<a class="main-logo"><img src="img/logo.png" alt="Gllacy Logo" width="154" height="64"></a>
+
+	  	<ul class="main-nav">
+	  		<li class="main-nav-catalog">
+	  			Каталог
+	  			<ul class="catalog-list hidden">
+	  				<li class="catalog-news">Новинки<hr></li>
+	  				<li class="catalog-link">
+	  					<a href="catalog.html">Сливочное</a>
+	  				</li>
+	  				<li>Щербеты</li>
+	  				<li>Фруктовый лед</li>
+	  				<li>Мелорин</li>
+	  			</ul>
+	  		</li>
+	  		<li>Доставка и оплата</li>
+	  		<li>О Компании</li>
+	  	</ul>
+
+	  	<ul class="user-nav">
+	  		<li class="user-nav-search">
+	  			<input type="search" class="hidden" placeholder="Что ищем?">
+	  		</li>
+	  		<li>
+	  			Вход
+	  			<form action="." class="enter-form hidden">
+	  				<input type="email" placeholder="Электронная почта">
+	  				<input type="password" placeholder="Пароль">
+	  				<button type="button" class="btn enter-form-btn">Войти</button>
+	  				<a href="#" class="forgotten-password">Забыли пароль?</a>
+	  				<a href="#" class="new-registration">Новая регистрация</a>
+	  			</form>
+	  		</li>
+	  		<li>2 товара
+					<table class="cart-list">
+						<tr>
+							<td class="cart-delete"><button type="button">X</button></td>
+							<td class="cart-item">Пломбир с апельсиновым джемом</td>
+							<td class="cart-weight">1,5 кг х 200 руб.</td>
+							<td class="cart-price">300 руб.</td>
+						</tr>
+						<tr>
+							<td class="cart-delete"><button type="button">X</button></td>
+							<td class="cart-item">Клубничный пломбир с присыпкой из белого шоколада</td>
+							<td class="cart-weight">1,5 кг х 300 руб.</td>
+							<td class="cart-price">450 руб.</td>
+						</tr>
+					</table>
+					<p class="cart-summary">Итого: <span class="cart-final-price">750 руб.</span></p>
+					<button type="button" class="btn cart-order-btn">Оформить заказ</button>
+	  		</li>
+	  	</ul>
+
+	  		<p class="user-nav-open">С 10 до 20, ежедневно</p>
+	  		<p class="user-nav-phone">8 812 450-25-25</p>
+
+
+		</header>
+
+		<!-- Main -->
+		
+		<main class="containter">
+			<ul class="breadcrumbs">
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="#">Каталог</a></li>
+				<li>Сливочное</li>
+			</ul>
+
+			<h1 class="main-title">Сливочное мороженое</h1>
+
+			<form action="." method="get" class="filter">
+				
+			</form>
+
+			<ul class="product-list">
+				<li>
+					<img src="img/icecreames/1. png" alt="Мороженое-1">
+					<p class="price">310₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/2. png" alt="Мороженое-2">
+					<p class="price">380₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочно-кофейное с кусочками шоколада</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/3. png" alt="Мороженое-3">
+					<p class="price">355₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/4. png" alt="Мороженое-4">
+					<p class="price">415₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочное крем-брюле с карамельной подливкой</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/5. png" alt="Мороженое-5">
+					<p class="price">325₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочное с брусничным джемом</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/6. png" alt="Мороженое-6">
+					<p class="price">410₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочно-черничное с цельными ягодами черники</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/7. png" alt="Мороженое-7">
+					<p class="price">375₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочно-лимонное с карамельной присыпкой</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/8. png" alt="Мороженое-8">
+					<p class="price">320₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочное с шоколадной стружкой</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/9. png" alt="Мороженое-9">
+					<p class="price">440₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочно-ванильное с кусочками шоколада</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/10. png" alt="Мороженое-10">
+					<p class="price">435₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочноe с ментоловым сиропом</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/11. png" alt="Мороженое-11">
+					<p class="price">355₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочное с кусочками черного шоколада</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+				<li>
+					<img src="img/icecreames/12. png" alt="Мороженое-12">
+					<p class="price">420₽<span class="kilo">/кг</span></p>
+					<p class="product-description">Сливочное с мятным сиропом</p>
+					<button type="button" class="btn fast-view-btn">Быстрый просмотр</button>
+				</li>
+			</ul>
+
+			<ul class="pagginator">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+
+		</main>
+		
+		
+		<!-- Footer -->
+
+		<footer class="main-footer">
+
+
+			<ul class="footer-social">
+
+				<li class="social-btn social-btn-twitter">
+					<a href="http://www.twitter.com">Twitter</a>
+				</li>
+				<li class="social-btn social-btn-instagram">
+					<a href="http://www.instagram.com">Instagram</a>
+				</li>
+				<li class="social-btn social-btn-facebook">
+					<a href="http://www.facebook.com">Facebook</a>
+				</li>
+				<li class="social-btn social-btn-vkontakte">
+					<a href="http://www.vk.com">ВКонтакте</a>
+				</li>
+
+			</ul>
+
+			<ul class="footer-nav">
+
+				<li>
+					<a href="#">Для поставщиков</a>
+				</li>
+				<li>
+					<a href="#">Наши документы</a>
+				</li>
+				<li>
+					<a href="#">О производстве</a>
+				</li>
+				<li>
+					<a href="#">Экологические стандарты</a>
+				</li>
+
+			</ul>
+
+			<ul class="footer-copyright">
+
+				<li class="academy-logo">
+					<a href="https://htmlacademy.ru/intensive/htmlcss">
+						<img src="img/logo-htmlacademy.png" alt="Логотип HTML Academy" width="108" height="39">
+					</a>
+				</li>
+				<li>
+					<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
+				</li>
+
+			</ul> <!-- Список - ради однообразности в футере -->
+
+
+		</footer>
+  </body>
+</html>
