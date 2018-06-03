@@ -75,17 +75,58 @@
 		<!-- Main -->
 		
 		<main class="containter">
+
+
 			<ul class="breadcrumbs">
+
 				<li><a href="index.html">Главная</a></li>
 				<li><a href="#">Каталог</a></li>
 				<li>Сливочное</li>
+
 			</ul>
+
 
 			<h1 class="main-title">Сливочное мороженое</h1>
 
+
 			<form action="." method="get" class="filter">
 				
+				<p class="form-element-title">Сортировка:</p>
+				<div class="filter-element-substrate">
+					<select name="sort-type" id="sort-type" class="sort-type">
+						<option value="popoular">по популярности</option>
+						<option value="cheap-first">сначала недорогие</option>
+						<option value="expensive-first">сначала дорогие</option>
+						<option value="fat-content">по жирности</option>
+					</select>
+				</div>				
+				
+				<p class="form-element-title">Цена: <span class="min-price">100 руб.</span> – <span class="max-price">500 руб.</span></p>
+				<div class="filter-element-substrate">
+					<div class="price-range"></div>
+				</div>
+				
+				<p class="form-element-title">Жирность:</p>
+				<div class="filter-element-substrate">
+					<label><input type="radio"> 0%</label>
+					<label><input type="radio" checked> до 10%</label>
+					<label><input type="radio"> до 30%</label>
+					<label><input type="radio"> выше 30%</label>
+				</div>
+				
+				<p class="form-element-title"> Наполнители:</p>
+				<div class="filter-element-substrate">
+					<label><input type="checkbox" checked> шоколадные</label>
+					<label><input type="checkbox" checked> сахарные присыпки</label>
+					<label><input type="checkbox"> фрукты</label>
+					<label><input type="checkbox"> сиропы</label>
+					<label><input type="checkbox"> джемы</label>
+				</div>
+
+				<button type="button" class="filter-btn">Применить</button>
+
 			</form>
+
 
 			<ul class="product-list">
 				<li>
@@ -162,6 +203,7 @@
 				</li>
 			</ul>
 
+
 			<ul class="pagginator">
 				<li>1</li>
 				<li>2</li>
@@ -169,6 +211,7 @@
 				<li>4</li>
 				<li>5</li>
 			</ul>
+
 
 		</main>
 		
