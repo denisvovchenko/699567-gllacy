@@ -14,7 +14,9 @@
 
 			<nav class="main-nav">
 
-		  	<a class="main-logo" href="index.html"><img src="img/svg/logo.svg" alt="Gllacy Logo" width="154" height="64"></a>
+		  	<h2 class="visually-hidden">Навигация по сайту</h2>
+
+		  	<a class="main-logo"><img src="img/svg/logo.svg" alt="Логотип магазина Gllacy" width="154" height="64"></a>
 
 		  	<ul class="site-nav">
 		  		<li class="site-nav-catalog">
@@ -35,22 +37,27 @@
 
 		  	<ul class="user-nav">
 		  		<li class="user-nav-search">
-		  			<a href="/search.html" class="user-nav-search-link">Поиск</a>
+		  			<a href="/search.html" class="user-nav-search-link"><span class="visually-hidden">Окно поиска</span></a>
 		  			<div class="user-nav-hidden-window">
 							<form action="." method="get">
-		  					<input type="search" class="hidden" placeholder="Что ищем?">
+								<label class="search-input">
+									<span class="visually-hidden">Поиск по сайту</span>
+		  						<input type="search" class="hidden" placeholder="Что ищем?">
+		  					</label>
 		  				</form>
 		  			</div>
 		  		</li>
 
 		  		<li class="user-nav-login">
-		  			<a href="/autorization.html" class="user-nav-login-link">Вход</a>
+		  			<a href="/autorization.html" class="user-nav-login-link"><span class="visually-hidden">Окно входа</span></a>
 		  			<div class="user-nav-hidden-window">
 			  			<form action="." class="login-form">
 			  				<label class="login-input">
+			  					<span class="visually-hidden">Введите Вашу электронную почту</span>
 				  				<input class="login-email-field" type="email" placeholder="Электронная почта">
 				  			</label>
 				  			<label class="login-input">
+				  				<span class="visually-hidden">Введите пароль</span>
 			  					<input class="login-password-field" type="password" placeholder="Пароль">
 			  				</label>
 			  				<div class="login-form-bottom">
@@ -65,20 +72,23 @@
 		  		</li>
 
 		  		<!-- <li class="user-nav-cart user-nav-cart-empty">
-		  			<a href="/cart.html"></a>Пусто
+		  			<h3 class="visually-hidden">Корзина</h3>
+		  			<a href="/cart.html">Пусто</a>
 		  		</li> -->
 		  		<li class="user-nav-cart user-nav-cart-full">
+		  			<h3 class="visually-hidden">Корзина</h3>
 		  			<a class="user-nav-cart-link" href="cart.html">2 товара</a>
+
 		  			<div class="user-nav-hidden-window">
 		  				<form action="." method="get">
 			  				<table class="cart-list">
 									<tr>
 										<td class="cart-delete">
-											<button type="button">Удалить</button>
+											<button type="button">Удалить из корзины</button>
 										</td>
 										<td class="cart-img">
 											<figure class="cart-img-figure">
-												<img src="img/icecreames/1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
+												<img src="img/icecreames/1.jpg" alt="Фото товара" width="33" height="33">
 											</figure>
 										</td>
 										<td class="cart-item">Пломбир с апельсиновым джемом</td>
@@ -89,11 +99,11 @@
 									</tr>
 									<tr>
 										<td class="cart-delete">
-											<button type="button">Удалить</button>
+											<button type="button">Удалить из корзины</button>
 										</td>
 										<td class="cart-img">
 											<figure class="cart-img-figure">
-												<img src="img/icecreames/3.jpg" alt="Клубничный пломбир" width="33" height="33">
+												<img src="img/icecreames/3.jpg" alt="Фото товара" width="33" height="33">
 											</figure>
 										</td>
 										<td class="cart-item">Клубничный пломбир с присыпкой из белого шоколада</td>
@@ -113,8 +123,8 @@
 		  </nav>
 			
 			<div class="header-info">
-	  		<p class="header-info-open-hours">С 10 до 20, ежедневно</p>
-	  		<p class="header-info-phone">8 812 450-25-25</p>
+	  		<p class="header-info-open-hours"><span class="visually-hidden">Мы открыты </span>С 10 до 20, ежедневно</p>
+	  		<p class="header-info-phone"><span class="visually-hidden">Звоните по номеру </span>8 812 450-25-25</p>
 	  	</div>
 
 
@@ -138,6 +148,8 @@
 
 
 			<form action="." method="get" class="filter">
+
+				<h2 class="visually-hidden">Фильтр</h2>
 				
 				<div class="filter-element filter-sort-type">
 					<p class="filter-element-title">Сортировка:</p>
@@ -319,13 +331,13 @@
 
 
 			<ul class="pagination">
-				<li class="pag-prev-btn"><button type="button">Предыдущий</button></li>
+				<li class="pag-prev-btn"><button type="button"><span class="visually-hidden">Предыдущая страница</span></button></li>
 				<li><a>1</a></li>
 				<li><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
 				<li><a href="#">4</a></li>
 				<li><a href="#">5</a></li>
-				<li class="pag-next-btn"><button type="button">Следующий</button></li>
+				<li class="pag-next-btn"><button type="button"><span class="visually-hidden">Следующая страница</span></button></li>
 			</ul>
 
 
@@ -335,40 +347,45 @@
 
 		<footer class="main-footer">
 
+			<div class="footer-social">
+				<h3 class="visually-hidden">Ссылки на социальные сети</h3>
+				<ul class="social-networks">
 
-			<ul class="footer-social">
+					<li class="social-btn social-btn-twitter">
+						<a href="http://www.twitter.com">Twitter</a>
+					</li>
+					<li class="social-btn social-btn-instagram">
+						<a href="http://www.instagram.com">Instagram</a>
+					</li>
+					<li class="social-btn social-btn-facebook">
+						<a href="http://www.facebook.com">Facebook</a>
+					</li>
+					<li class="social-btn social-btn-vkontakte">
+						<a href="http://www.vk.com">ВКонтакте</a>
+					</li>
 
-				<li class="social-btn social-btn-twitter">
-					<a href="http://www.twitter.com">Twitter</a>
-				</li>
-				<li class="social-btn social-btn-instagram">
-					<a href="http://www.instagram.com">Instagram</a>
-				</li>
-				<li class="social-btn social-btn-facebook">
-					<a href="http://www.facebook.com">Facebook</a>
-				</li>
-				<li class="social-btn social-btn-vkontakte">
-					<a href="http://www.vk.com">ВКонтакте</a>
-				</li>
+				</ul>
+			</div>
+			
+			<div class="footer-nav">
+				<h3 class="visually-hidden">Полезные ссылки</h3>
+				<ul class="footer-nav-list">
 
-			</ul>
+					<li class="add-heart-before">
+						<a href="#">Для поставщиков</a>
+					</li>
+					<li>
+						<a href="#">Наши документы</a>
+					</li>
+					<li>
+						<a href="#">О производстве</a>
+					</li>
+					<li>
+						<a href="#">Экологические стандарты</a>
+					</li>
 
-			<ul class="footer-nav">
-
-				<li class="add-heart-before">
-					<a href="#">Для поставщиков</a>
-				</li>
-				<li>
-					<a href="#">Наши документы</a>
-				</li>
-				<li>
-					<a href="#">О производстве</a>
-				</li>
-				<li>
-					<a href="#">Экологические стандарты</a>
-				</li>
-
-			</ul>
+				</ul>
+			</div>
 
 			<div class="footer-copyright">
 
