@@ -1,5 +1,80 @@
+body {
+	color: #fff;
+	font-size: 16px;
+	font-family: Roboto;
+}
+
 body > * {
 	background-color: #849d8f;
-	margin: 0 auto;
-	width: 1200px;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.btn {
+	color: #fff;
+	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+	font-weight: bold;
+
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+	background-color: #ffffff;
+	background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+	border: 0;
+	border-radius: 20px;
+}
+
+.btn:hover,
+.btn:focus {
+	box-shadow: 0 2px 2px #ac1000;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn:active {
+	color: #fceeec;
+
+	box-shadow: inset 0 2px 2px #942718;
+	background-color: rgba(0, 0, 0, 0.07);
+	background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
+}
+
+
+
+.main-nav ul {
+	list-style: none;
+}
+
+.site-nav {
+	font-weight: 700;
+	line-height: 18px;
+}
+
+
+
+
+
+
+
+.offer-btn {
+	font-size: 18px;
+	line-height: 24px;
+
+	opacity: 0.99;
+}
+
+.offer-btn:hover,
+.offer-btn:focus {
+	color: #fefefe;
 }
