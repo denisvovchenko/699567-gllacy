@@ -43,7 +43,7 @@
 							<form action="." method="get">
 								<label class="search-input">
 									<span class="visually-hidden">Поиск по сайту</span>
-		  						<input type="search" class="hidden" placeholder="Что ищем?">
+		  						<input type="text" class="hidden" placeholder="Что ищем?">
 		  					</label>
 		  				</form>
 		  			</div>
@@ -85,7 +85,7 @@
 			  				<table class="cart-list">
 									<tr>
 										<td class="cart-delete">
-											<button type="button">Удалить из корзины</button>
+											<button type="button"><span class="visually-hidden">Удалить из корзины</span></button>
 										</td>
 										<td class="cart-img">
 											<figure class="cart-img-figure">
@@ -100,7 +100,7 @@
 									</tr>
 									<tr>
 										<td class="cart-delete">
-											<button type="button">Удалить из корзины</button>
+											<button type="button"><span class="visually-hidden">Удалить из корзины</span></button>
 										</td>
 										<td class="cart-img">
 											<figure class="cart-img-figure">
@@ -146,23 +146,23 @@
 				<ul class="slider-list">
 					<li class="slider-item slider-item-first active">
 						<h3 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h3>
-						<a href="#" class="btn slider-btn">Давайте оба</a>
+						<a href="#" class="btn slider-btn">Давайте оба!</a>
 					</li>
 
 					<li class="slider-item slider-item-second">
 						<h3 class="slider-title">Шоколадный пломбир и лимонный сорбет </h3>
-						<a href="#" class="btn slider-btn">Давайте оба</a>
+						<a href="#" class="btn slider-btn">Давайте оба!</a>
 					</li>
 
 					<li class="slider-item slider-item-third">
 						<h3 class="slider-title">Пломбир с помадкой и клубничный щербет</h3>
-						<a href="#" class="btn slider-btn">Давайте оба</a>
+						<a href="#" class="btn slider-btn">Давайте оба!</a>
 					</li>
 				</ul>
 
 				<ul class="slider-pagination">
 					<li>
-						<button type="button"><span class="visually-hidden">Вариант 1</span></button>
+						<button type="button" class="slider-pagination-active"><span class="visually-hidden">Вариант 1</span></button>
 					</li>
 					<li>
 						<button type="button"><span class="visually-hidden">Вариант 2</span></button>
@@ -289,6 +289,8 @@
 
 			<section class="map-block">
 
+				<h2 class="visually-hidden">Карта с нашим адресом</h2>
+
 				<img src="img/map.png" alt="Карта" width="1200" height="430">
 
 				<section class="map-contacts">
@@ -369,7 +371,7 @@
 				<h3 class="visually-hidden">Полезные ссылки</h3>
 				<ul class="footer-nav-list">
 
-					<li class="add-heart-before">
+					<li class="footer-nav-special">
 						<a href="#">Для поставщиков</a>
 					</li>
 					<li>

@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -42,7 +43,7 @@
 							<form action="." method="get">
 								<label class="search-input">
 									<span class="visually-hidden">Поиск по сайту</span>
-		  						<input type="search" class="hidden" placeholder="Что ищем?">
+		  						<input type="text" class="hidden" placeholder="Что ищем?">
 		  					</label>
 		  				</form>
 		  			</div>
@@ -84,7 +85,7 @@
 			  				<table class="cart-list">
 									<tr>
 										<td class="cart-delete">
-											<button type="button">Удалить из корзины</button>
+											<button type="button"><span class="visually-hidden">Удалить из корзины</span></button>
 										</td>
 										<td class="cart-img">
 											<figure class="cart-img-figure">
@@ -99,7 +100,7 @@
 									</tr>
 									<tr>
 										<td class="cart-delete">
-											<button type="button">Удалить из корзины</button>
+											<button type="button"><span class="visually-hidden">Удалить из корзины</span></button>
 										</td>
 										<td class="cart-img">
 											<figure class="cart-img-figure">
@@ -199,7 +200,7 @@
 					</div>
 				</div>
 
-				<div class="filter-element filter-button">
+				<div class="filter-element-substrate">
 					<button type="button" class="filter-btn">Применить</button>
 				</div>
 
@@ -332,7 +333,7 @@
 
 			<ul class="pagination">
 				<li class="pag-prev-btn"><button type="button"><span class="visually-hidden">Предыдущая страница</span></button></li>
-				<li><a>1</a></li>
+				<li><a class="pagination-active">1</a></li>
 				<li><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
 				<li><a href="#">4</a></li>
