@@ -100,14 +100,14 @@ input[type="email"]:focus {
 	line-height: 18px;
 }
 
-.site-nav a:hover,
-.site-nav a:focus {
+.site-nav [href]:hover,
+.site-nav [href]:focus {
 	color: #333333;
 
 	background-color: #f7f6f3;
 }
 
-.site-nav a:active {
+.site-nav [href]:active {
 	box-shadow: inset 0 2px 1px #696969;
 	background-color: #f8f7f4;
 }
@@ -124,12 +124,12 @@ input[type="email"]:focus {
 	line-height: 16px;
 }
 
-.catalog-list a:hover,
-.catalog-list a:focus {
+.catalog-list [href]:hover,
+.catalog-list [href]:focus {
 	background-color: #fbded7;
 }
 
-.catalog-list a:active {
+.catalog-list [href]:active {
 	background-color: #f6b5a5;
 }
 
@@ -145,11 +145,12 @@ input[type="email"]:focus {
 
 .user-nav {
 	font-size: 14px;
-	font-weight: 500;
 	line-height: 16px;
 }
 
 .user-nav a {
+	font-weight: 500;
+	
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -166,9 +167,10 @@ input[type="email"]:focus {
 	background-color: rgba(248, 247, 244, 0.9);
 }
 
-.login-form-link {
+a.login-form-link {
 	color: #323232;
 	font-size: 13px;
+	font-weight: 400;
 	line-height: 24px;
 }
 
@@ -190,6 +192,10 @@ input[type="email"]:focus {
 	color: #323232;
 	font-size: 13px;
 	line-height: 16px;
+}
+
+.cart-delete button {
+	cursor: pointer;
 }
 
 .cart-weight-price {
@@ -509,6 +515,10 @@ input[type="email"]:focus {
 .pagination [href]:hover,
 .pagination [href]:focus {
 	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination button {
+	cursor: pointer;
 }
 
 /* Footer */
