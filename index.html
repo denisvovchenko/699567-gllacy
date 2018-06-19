@@ -11,7 +11,7 @@
 
    <!-- Header -->
 
-		<header class="main-header">
+		<header class="main-header container centerer">
 
 			<nav class="main-nav">
 
@@ -22,6 +22,7 @@
 		  	<ul class="site-nav">
 		  		<li class="site-nav-catalog">
 		  			<a href="#">Каталог</a>
+		  			
 		  			<ul class="catalog-list hidden">
 		  				<li class="catalog-news"><a href="#">Новинки</a></li>
 		  				<li class="catalog-link">
@@ -38,12 +39,13 @@
 
 		  	<ul class="user-nav">
 		  		<li class="user-nav-search">
-		  			<a href="/search.html" class="user-nav-search-link"><span class="visually-hidden">Окно поиска</span></a>
+		  			<a href="#" class="user-nav-search-link"><span class="visually-hidden">Окно поиска</span></a>
+
 		  			<div class="user-nav-search-window hidden">
 							<form action="." method="get">
-								<label class="search-input">
+								<label class="search-input-area">
 									<span class="visually-hidden">Поиск по сайту</span>
-		  						<input type="text" class="hidden" placeholder="Что ищем?">
+		  						<input type="text" class="search-field" placeholder="Что ищем?">
 		  					</label>
 		  				</form>
 		  			</div>
@@ -53,13 +55,13 @@
 		  			<a href="/autorization.html" class="user-nav-login-link">Вход</a>
 		  			<div class="user-nav-login-window hidden">
 			  			<form action="." class="login-form">
-			  				<label class="login-input">
+			  				<label class="login-input-area">
 			  					<span class="visually-hidden">Введите Вашу электронную почту</span>
-				  				<input class="login-email-field" type="email" placeholder="Электронная почта">
+				  				<input class="login-input-field" type="email" placeholder="Электронная почта">
 				  			</label>
-				  			<label class="login-input">
+				  			<label class="login-input-area">
 				  				<span class="visually-hidden">Введите пароль</span>
-			  					<input class="login-password-field" type="password" placeholder="Пароль">
+			  					<input class="login-input-field" type="password" placeholder="Пароль">
 			  				</label>
 			  				<div class="login-form-bottom">
 				  				<button type="button" class="btn login-form-btn">Войти</button>
@@ -139,12 +141,12 @@
 			<h1 class="visually-hidden">Магазин мороженого Gllacy</h1>
 			
 
-			<section class="slider">
+			<section class="slider centerer">
 
 				<h2 class="visually-hidden">Наше мороженое</h2>
 				
 				<ul class="slider-list">
-					<li class="slider-item slider-item-first active">
+					<li class="slider-item slider-item-first slider-item-active">
 						<h3 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h3>
 						<a href="#" class="btn slider-btn">Давайте оба!</a>
 					</li>
@@ -175,20 +177,20 @@
 			</section>
 
 			
-			<article class="offers-block">
+			<article class="offers-block centerer">
 
 				<h2 class="visually-hidden">Специальные предложения</h2>
 
 				<ul class="offers">
-					<li class="offer offer-raspberry">
+					<li class="offer offer-rasp">
 						<h3 class="offer-title">Малинка даром!</h3>
 						<p class="offer-descr">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-						<a href="#" class="btn offer-btn">Хочу варенье!</a>
+						<a href="#" class="btn offer-btn offer-rasp-btn">Хочу варенье!</a>
 					</li>
-					<li class="offer offer-chocolate">
-						<h3 class="offer-title">Шоколадки даром!</h3>
-						<p class="offer-descr">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-						<a href="#" class="btn offer-btn">Хочу шоколадки!</a>
+					<li class="offer offer-choco">
+						<h3 class="offer-title offer-choco-title">Шоколадки даром!</h3>
+						<p class="offer-descr offer-choco-descr">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+						<a href="#" class="btn offer-btn offer-choco-btn">Хочу шоколадки!</a>
 					</li>
 				</ul>
 
@@ -203,7 +205,7 @@
 					<li class="product-item hit">
 						<a href="#" class="product-item-img-price">
 							<img src="img/icecreames/1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-							<p class="price">310₽<span class="kilo">/кг</span></p>
+							<p class="price">310<span class="kilo">/кг</span></p>
 						</a>
 						<p class="product-descr">
 							<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -213,7 +215,7 @@
 					<li class="product-item hit">
 						<a href="#" class="product-item-img-price">
 							<img src="img/icecreames/2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-							<p class="price">380₽<span class="kilo">/кг</span></p>
+							<p class="price">380<span class="kilo">/кг</span></p>
 						</a>
 						<p class="product-descr">
 							<a href="#">Сливочно-кофейное с кусочками шоколада</a>
@@ -223,7 +225,7 @@
 					<li class="product-item hit">
 						<a href="#" class="product-item-img-price">
 							<img src="img/icecreames/3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-							<p class="price">355₽<span class="kilo">/кг</span></p>
+							<p class="price">355<span class="kilo">/кг</span></p>
 						</a>
 						<p class="product-descr">
 							<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
@@ -233,7 +235,7 @@
 					<li class="product-item hit">
 						<a href="#" class="product-item-img-price">
 							<img src="img/icecreames/4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-							<p class="price">415₽<span class="kilo">/кг</span></p>
+							<p class="price">415<span class="kilo">/кг</span></p>
 						</a>
 						<p class="product-descr">
 							<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
@@ -253,37 +255,41 @@
 				
 				<ul class="about-features">
 					<li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+					<li>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
 					<li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-					<li>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
 					<li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
 				</ul>
 
 			</article>
 
+			
+			<section class="news-subscribe-wrapper centerer">
+				<section class="news-block">
 
-			<section class="news-block">
+					<h2 class="news-title">Новое в нашем блоге</h2>
 
-				<h2 class="news-title">Новое в нашем блоге</h2>
+					<p class="news-post"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
 
-				<p class="news-post"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
-
-			</section>
+				</section>
 
 
-			<section class="subscribe-block">
+				<section class="subscribe-block">
 
-				<h2 class="visually-hidden">Оформление подписки</h2>
+					<h2 class="visually-hidden">Оформление подписки</h2>
+					
+					<div class="subscribe-wrapper">
+						<p class="subscribe-descr">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
-				<p class="subscribe-descr">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+						<form action="." method="get" class="subscribe-form">
+							<label class="subscribe-email-area">
+								<span class="visually-hidden">Введите Вашу электронную почту</span>
+								<input type="email" class="subscribe-email-field" placeholder="Электронная почта">
+							</label>
+							<button type="button" class="btn subscribe-form-btn">Отправить</button>
+						</form>
+					</div>	
 
-				<form action="." method="get" class="subscribe-form">
-					<label class="subscribe-email">
-						<span class="visually-hidden">Введите Вашу электронную почту</span>
-						<input type="email" class="subscribe-email-field" placeholder="Электронная почта">
-					</label>
-					<button type="button" class="btn subscribe-form-btn">Отправить</button>
-				</form>
-
+				</section>
 			</section>
 
 
@@ -299,69 +305,42 @@
 					
 					<div class="map-info">
 						<p>
-							Адрес главного офиса и офлайн-магазина:
-							<span class="map-big-font">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+							Адрес главного офиса и&nbspофлайн-магазина:
+							<span class="map-big-font map-big-font-adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
 						</p>
 
 						<p>
 							Для заказов по телефону:
-							<span class="map-big-font">8 812 450-25-25</span>
+							<span class="map-big-font map-big-font-phone">8 812 450-25-25</span>
 							(с 10 до 20 ежедневно)
 						</p>
-
-						<button type="button" class="btn btn-feedback-form">Форма обратной связи</button>
 					</div>
+
+						<button type="button" class="btn open-feedback-btn">Форма обратной связи</button>
 				</section>
-
 			</section>
-
-
-			<section class="modal feedback-modal">
-				<div class="modal-inner">
-					<h2 class="feedback-title">Мы обязательно вам ответим!</h2>
-
-					<button type="button" class="modal-close"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
-
-					<form action="." class="feedback-form">
-						<label class="feedback-input">
-							<span class="visually-hidden">Введите Ваше имя</span>
-							<input class="name-field" type="text" placeholder="Как вас зовут?">
-						</label>
-						<label class="feedback-input">
-							<span class="visually-hidden">Введите вашу электронную почту</span>
-							<input class="email-field" type="email" placeholder="Ваша почта для ответа?">
-						</label>
-						<label class="feedback-input feedback-textarea">
-							<span class="visually-hidden">Введите Ваш вопрос или предложение</span>
-							<textarea class="user-message-area" name="user-message" cols="20" rows="5" placeholder="Напишите что-нибудь..."></textarea>
-						</label>
-						<button type="button" class="btn feedback-send-btn">Отправить</button>
-					</form>
-				</div>
-			</section>
-
 
 		</main>
 		
 		<!-- Footer -->
 
-		<footer class="main-footer">
+		<footer class="main-footer container centerer">
 
 			<div class="footer-social">
 				<h3 class="visually-hidden">Ссылки на социальные сети</h3>
 				<ul class="social-networks">
 
 					<li class="social-btn social-btn-twitter">
-						<a href="http://www.twitter.com">Twitter</a>
+						<a href="http://www.twitter.com"><span class="visually-hidden">Twitter</span></a>
 					</li>
 					<li class="social-btn social-btn-instagram">
-						<a href="http://www.instagram.com">Instagram</a>
+						<a href="http://www.instagram.com"><span class="visually-hidden">Instagram</span></a>
 					</li>
 					<li class="social-btn social-btn-facebook">
-						<a href="http://www.facebook.com">Facebook</a>
+						<a href="http://www.facebook.com"><span class="visually-hidden">Facebook</span></a>
 					</li>
 					<li class="social-btn social-btn-vkontakte">
-						<a href="http://www.vk.com">ВКонтакте</a>
+						<a href="http://www.vk.com"><span class="visually-hidden">ВКонтакте</span></a>
 					</li>
 
 				</ul>
@@ -383,7 +362,6 @@
 					<li>
 						<a href="#">Экологические стандарты</a>
 					</li>
-
 				</ul>
 			</div>
 
@@ -402,5 +380,31 @@
 
 
 		</footer>
+
+		<section class="modal feedback-modal">
+			<div class="modal-inner">
+				<h2 class="feedback-title">Мы обязательно вам ответим!</h2>
+
+				<form action="." class="feedback-form">
+					<label class="feedback-input-area">
+						<span class="visually-hidden">Введите Ваше имя</span>
+						<input class="feedback-input-field" type="text" placeholder="Как вас зовут?">
+					</label>
+					<label class="feedback-input-area">
+						<span class="visually-hidden">Введите вашу электронную почту</span>
+						<input class="feedback-input-field" type="email" placeholder="Ваша почта для ответа?">
+					</label>
+					<label class="feedback-input-area feedback-textarea">
+						<span class="visually-hidden">Введите Ваш вопрос или предложение</span>
+						<textarea class="user-message-area" name="user-message" rows="7" placeholder="Напишите что-нибудь..."></textarea>
+					</label>
+					<button type="button" class="btn feedback-form-btn">Отправить</button>
+				</form>
+
+				<button type="button" class="modal-close"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
+			</div>
+		</section>
+
+		<script src="js/script.js"></script>
   </body>
 </html>
