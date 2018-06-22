@@ -5,6 +5,13 @@ var sliderPagButtons 	= document.querySelectorAll('.slider-pagination button');
 var sliders 					=	document.querySelectorAll('.slider-item');
 var body 							= document.querySelector('body');
 
+var sliderImage1 			= new Image(1045, 881);
+		sliderImage1.src 	= 'img/slider-img/slider-1.png';
+var sliderImage2			= new Image(1045, 881);
+		sliderImage2.src 	=	'img/slider-img/slider-2.png';
+var sliderImage3			= new Image(1045, 881);
+		sliderImage3.src 	= 'img/slider-img/slider-3.png'
+
 for (let i = 0; i < sliderPagButtons.length; i++) {
 
 	sliderPagButtons[i].addEventListener('click', function() {
@@ -31,8 +38,17 @@ function toggleSlider(btn) {
 	sliders[btn].classList.add('slider-item-active');
 };
 
+// function showMap() {
+// 	var mapOptions = {
+// 		center: new google.maps.LatLng(59.938795, 30.323085),
+// 		zoom: 100;
+// 	};
+
+// 	var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+// }
+
 feedbackBtn.addEventListener('click', function() {
-	modalWindow.style.display = 'block';
+	modalWindow.style.display = 'flex';
 });
 
 closeModal.addEventListener('click', function() {
