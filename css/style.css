@@ -110,11 +110,16 @@ textarea:focus {
 
 .site-nav a,
 .login-form-link,
-.product-descr,
+.product-descr a,
 .news-post a,
 .footer-nav-list a,
 .made-in a {
 	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.news-post a {
+	text-decoration-color: inherit;
 }
 
 .container {
@@ -135,7 +140,6 @@ textarea:focus {
 
 .main-nav {
 	display: flex;
-	margin-bottom: -4px;
 }
 
 .main-nav ul {
@@ -155,6 +159,7 @@ textarea:focus {
 .site-nav {
 	display: flex;
 	flex-wrap: wrap;
+	align-content: flex-start;
 	max-width: 520px;
 	margin: 16px 0 0;
 	padding: 0;
@@ -164,6 +169,7 @@ textarea:focus {
 }
 
 .site-nav a {
+	display: block;
 	position: relative;
 
 	padding: 5px 14px 6px 16px;
@@ -230,6 +236,12 @@ textarea:focus {
 .catalog-list [href]:active {
 	background-color: #f6b5a5;
 }
+
+/*.catalog-list:hover .site-nav-catalog {
+	color: #333333;
+
+	background-color: #f7f6f3;
+}*/
 
 .catalog-news a {
 	position: relative;
@@ -516,7 +528,7 @@ li.user-nav-cart {
 }
 
 .header-info-phone {
-	margin: 0;
+	margin: 0 -1px 0;
 
 	font-size: 22px;
 	line-height: 24px;
@@ -528,8 +540,7 @@ li.user-nav-cart {
 	position: relative;
 
 	
-	margin-top: 275px;
-	margin-bottom: 42px;
+	margin: 275px -27px 42px;
 }
 
 .slider-list {
@@ -663,7 +674,7 @@ button.slider-pagination-active {
 
 .offer-btn {
 	display: block;
-	padding: 10px 20px 12px 22px;
+	padding: 10px 23px 12px 22px;
 	margin-left: auto;
 
 	font-size: 18px;
@@ -682,12 +693,12 @@ button.slider-pagination-active {
 }
 
 .offer-choco-btn {
-	padding-top: 9px;
-	padding-left: 21px;
+	padding: 9px 21px 12px 21px;
+
 }
 
 .hits-block {
-	margin: 0 -13px -37px;
+	margin: 0 -13px -36px;
 }
 
 .product-list {
@@ -723,7 +734,7 @@ button.slider-pagination-active {
 	position: relative;
 
 	display: block;
-	margin-bottom: 22px;
+	margin-bottom: 9px;
 }
 
 .hit .product-item-img-price::before {
@@ -744,7 +755,7 @@ button.slider-pagination-active {
 
 .product-item-img-price .price {
 	position: absolute;
-	bottom: 18px;
+	bottom: 12px;
 	left: 0;
 
 	margin: 0;
@@ -801,9 +812,7 @@ button.slider-pagination-active {
 }
 
 .about-block {
-	display: flex;
-	flex-direction: column;
-	padding: 25px 0 0 20px;
+	padding: 25px 0 13px 20px;
 	margin: 0 0 40px;
 
 	color: #323232;
@@ -814,7 +823,7 @@ button.slider-pagination-active {
 
 .about-main {
 	margin: 0;
-	margin-bottom: 21px;
+	margin-bottom: 8px;
 
 	font-size: 24px;
 	line-height: 30px;
@@ -840,13 +849,14 @@ button.slider-pagination-active {
 	position: relative;
 
 	flex-basis: 476px;
-	margin-bottom: 22px;
+	padding-top: 13px;
+	margin-bottom: 9px;
 }
 
 .about-features li::before {
 	content: "";
 	position: absolute;
-	top: -13px;
+	top: 0;
 	left: -56px;
 
 	width: 49px;
@@ -882,7 +892,7 @@ button.slider-pagination-active {
 }
 
 .news-block {
-	padding: 23px 256px 0 20px;
+	padding: 23px 255px 0 20px;
 
 	color: #323232;
 
@@ -910,7 +920,7 @@ button.slider-pagination-active {
 
 .subscribe-block {
 	flex-basis: 560px;
-	padding: 5px 6px;
+	padding: 5px 5px 5px 6px;
 
 	background: linear-gradient(135deg, #fff 12.5%, #94c9fd 12.5%, #94c9fd 25%, #fff 25%, #fff 37.5%, #f39288 37.5%, #f39288 50%, #fff 50%, #fff 62.5%, #94c9fd 62.5%, #94c9fd 75%, #fff 75%, #fff 87.5%, #f39288 87.5%) repeat;
 	background-size: 40px 40px;
@@ -918,7 +928,7 @@ button.slider-pagination-active {
 }
 
 .subscribe-wrapper {
-	padding: 29px 20px 35px 20px;
+	padding: 29px 21px 35px 20px;
 
 	background: #fff;
 	border-radius: 15px;
@@ -938,7 +948,7 @@ button.slider-pagination-active {
 }
 
 .subscribe-email-area {
-	width: 100%;
+	width: 368px;
 	margin-top: 1px;
 }
 
@@ -950,8 +960,8 @@ button.slider-pagination-active {
 }
 
 .subscribe-form-btn {
+	width: 129px;
 	padding: 0 19px 3px;
-	margin-left: 12px;
 
 	font-size: 18px;
 	line-height: 24px;
@@ -963,17 +973,26 @@ button.slider-pagination-active {
 
 .map-block {
 	position: relative;
+	
+	padding: 63px 27px;
+	margin: 0 -27px 17px -27px;
+}
 
-	margin: 0 0 14px -27px;
+img.map-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 1200px;
+	height: 430px;
 }
 
 .map-contacts {
-	position: absolute;
-	right: 26px;
-	top: 63px;
+	position: relative;
 
 	width: 302px;
-	padding: 29px 24px 31px;
+	padding: 29px 24px 31px 25px;
+	margin-left: auto;
 
 	background-color: #fff;
 	border-radius: 15px;
@@ -1015,11 +1034,6 @@ button.slider-pagination-active {
 	line-height: 24px;
 
 	border-radius: 25px;
-}
-
-.map-img {
-	position: absolute;
-	z-index: -1;
 }
 
 /* Catalog main */
@@ -1210,9 +1224,9 @@ button.slider-pagination-active {
 }
 
 .footer-nav-list li {
-	flex-basis: 50%;
-	margin-right: -33px;
+	min-width: 45%;
 	margin-bottom: 4px;
+	margin-right: 5px;
 }
 
 .footer-nav-special {
@@ -1225,7 +1239,7 @@ button.slider-pagination-active {
 	content: "";
 	position: absolute;
 	top: 3px;
-	left: -21px;
+	left: -22px;
 
 	width: 15px;
 	height: 13px;
@@ -1235,16 +1249,18 @@ button.slider-pagination-active {
 
 .academy-logo {
 	padding-left: 2px;
-	margin: 0;
+	margin: 0 0 2px;
 }
 
-.footer-copyright .made-in {
+.made-in {
 	margin: 0;
 
 	font-size: 12px;
 	line-height: 18px;
 	color: #fefefe;
 }
+
+/* Modal */
 
 .modal {
 	/*display: flex;*/
