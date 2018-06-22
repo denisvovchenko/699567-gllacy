@@ -14,6 +14,10 @@ body {
 	background: #849d8f url("../img/slider-img/slider-1.png") no-repeat center top;
 }
 
+.inner-page {
+	background: #849d8f;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -116,9 +120,6 @@ textarea:focus {
 .container {
 	width: 1200px;
 	margin: 0 auto;
-}
-
-.centerer {
 	padding: 0 27px;
 }
 
@@ -129,10 +130,7 @@ textarea:focus {
 /* Header */
 
 .main-header {
-	display: flex;
-	flex-direction: column;
 	padding-top: 9px;
-	margin-bottom: 275px;
 }
 
 .main-nav {
@@ -150,14 +148,15 @@ textarea:focus {
 
 .main-logo {
 	margin-right: 7px;
+	width: 154px;
+	height: 64px;
 }
 
 .site-nav {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 520px;
-	margin: 0;
-	margin-top: 16px;
+	margin: 16px 0 0;
 	padding: 0;
 
 	font-weight: 700;
@@ -249,9 +248,6 @@ textarea:focus {
 	bottom: -3px;
 	left: 8px;
 	right: 10px;
-
-	/*width: 128px;*/
-	/*margin-left: -14px;*/
 	
 	background: #fff;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -265,17 +261,21 @@ textarea:focus {
 
 .user-nav {
 	display: flex;
+	align-items: flex-start;
 	flex-wrap: wrap;
-	margin-left: auto;
 	max-width: 450px;
+	margin-left: auto;
 
 	font-size: 14px;
 	line-height: 16px;
 }
 
+.user-nav li {
+	margin-right: 9px;
+}
+
 .user-nav a {
 	display: block;
-	margin-right: 9px;
 
 	font-weight: 500;
 
@@ -317,8 +317,9 @@ textarea:focus {
 
 .user-nav-search-window {
 	position: absolute;
-	top: 36px;
-	right: 8px;
+	top: 100%;
+	right: 0;
+	margin-top: 5px;
 	
 	/*display: block;*/
 	width: 340px;
@@ -369,8 +370,9 @@ textarea:focus {
 
 .user-nav-login-window {
 	position: absolute;
-	top: 36px;
-	right: 8px;
+	top: 100%;
+	right: 0;
+	margin-top: 5px;
 	
 	/*display: block;*/
 	width: 276px;
@@ -424,7 +426,9 @@ a.login-form-link {
 	line-height: 24px;
 }
 
-
+li.user-nav-cart {
+	margin-right: 0;
+}
 
 .user-nav-cart-link {
 	position: relative;
@@ -499,8 +503,6 @@ a.login-form-link {
 }
 
 .header-info {
-	align-self: flex-end;
-	
 	text-align: right;
 	font-weight: 700;
 }
@@ -525,6 +527,8 @@ a.login-form-link {
 .slider {
 	position: relative;
 
+	
+	margin-top: 275px;
 	margin-bottom: 42px;
 }
 
@@ -612,6 +616,8 @@ button.slider-pagination-active {
 }
 
 .offer {
+	display: flex;
+	flex-direction: column;
 	flex-basis: 560px;
 	padding: 16px 21px 23px 18px;
 
@@ -657,7 +663,6 @@ button.slider-pagination-active {
 
 .offer-btn {
 	display: block;
-	width: 165px;
 	padding: 10px 20px 12px 22px;
 	margin-left: auto;
 
@@ -677,13 +682,12 @@ button.slider-pagination-active {
 }
 
 .offer-choco-btn {
-	width: 189px;
 	padding-top: 9px;
 	padding-left: 21px;
 }
 
 .hits-block {
-	margin: 0 14px -37px;
+	margin: 0 -13px -37px;
 }
 
 .product-list {
@@ -696,8 +700,12 @@ button.slider-pagination-active {
 }
 
 .product-item {
+	display: flex;
+	flex-direction: column;
 	flex-basis: 25%;
 	padding: 8px 13px 20px;
+
+	border-radius: 5px;
 }
 
 .product-item:hover,
@@ -731,21 +739,21 @@ button.slider-pagination-active {
 }
 
 .product-item-img-price img {
-	margin-bottom: -62px;
-
 	border-radius: 50%;
 }
 
 .product-item-img-price .price {
+	position: absolute;
+	bottom: 18px;
+	left: 0;
+
+	margin: 0;
+
 	font-size: 45px;
 	font-weight: 700;
 	line-height: 45px;
 
 	text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
-}
-
-.price {
-	margin: 0;
 }
 
 .product-item-img-price .kilo {
@@ -765,7 +773,7 @@ button.slider-pagination-active {
 	width: 30px;
 	height: 35px;
 
-	background: url("../img/svg/icon-ruble.svg") no-repeat;	
+	background: url("../img/svg/icon-ruble.svg") no-repeat;
 }
 
 .product-descr {
@@ -782,7 +790,7 @@ button.slider-pagination-active {
 	display: block;
 	width: 203px;
 	padding: 10px 15px 10px 18px;
-	margin: 0 auto;
+	margin: auto auto 0;
 
 	color: #fefefe;
 	font-size: 18px;
@@ -796,7 +804,7 @@ button.slider-pagination-active {
 	display: flex;
 	flex-direction: column;
 	padding: 25px 0 0 20px;
-	margin: 0 27px 40px;
+	margin: 0 0 40px;
 
 	color: #323232;
 
@@ -956,7 +964,7 @@ button.slider-pagination-active {
 .map-block {
 	position: relative;
 
-	margin-bottom: 14px;
+	margin: 0 0 14px -27px;
 }
 
 .map-contacts {
