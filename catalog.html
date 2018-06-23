@@ -38,12 +38,13 @@
 
 		  	<ul class="user-nav">
 		  		<li class="user-nav-search">
-		  			<a href="/search.html" class="user-nav-search-link"><span class="visually-hidden">Окно поиска</span></a>
-		  			<div class="user-nav-hidden-window hidden">
+		  			<a href="#" class="user-nav-search-link"><span class="visually-hidden">Окно поиска</span></a>
+
+		  			<div class="user-nav-search-window hidden">
 							<form action="." method="get">
-								<label class="search-input">
+								<label class="search-input-area">
 									<span class="visually-hidden">Поиск по сайту</span>
-		  						<input type="text" class="hidden" placeholder="Что ищем?">
+		  						<input type="text" class="search-field" placeholder="Что ищем?">
 		  					</label>
 		  				</form>
 		  			</div>
@@ -51,15 +52,15 @@
 
 		  		<li class="user-nav-login">
 		  			<a href="/autorization.html" class="user-nav-login-link">Вход</a>
-		  			<div class="user-nav-hidden-window hidden">
+		  			<div class="user-nav-login-window hidden">
 			  			<form action="." class="login-form">
-			  				<label class="login-input">
+			  				<label class="login-input-area">
 			  					<span class="visually-hidden">Введите Вашу электронную почту</span>
-				  				<input class="login-email-field" type="email" placeholder="Электронная почта">
+				  				<input class="login-input-field" type="email" placeholder="Электронная почта">
 				  			</label>
-				  			<label class="login-input">
+				  			<label class="login-input-area">
 				  				<span class="visually-hidden">Введите пароль</span>
-			  					<input class="login-password-field" type="password" placeholder="Пароль">
+			  					<input class="login-input-field" type="password" placeholder="Пароль">
 			  				</label>
 			  				<div class="login-form-bottom">
 				  				<button type="button" class="btn login-form-btn">Войти</button>
@@ -80,10 +81,9 @@
 		  			<h3 class="visually-hidden">Корзина</h3>
 		  			<a class="user-nav-cart-link" href="cart.html">2 товара</a>
 
-		  			<div class="user-nav-hidden-window hidden">
-		  				<form action="." method="get">
+		  			<div class="user-nav-cart-window hidden">
 			  				<table class="cart-list">
-									<tr>
+									<tr class="cart-item">
 										<td class="cart-delete">
 											<button type="button"><span class="visually-hidden">Удалить из корзины</span></button>
 										</td>
@@ -92,13 +92,13 @@
 												<img src="img/icecreames/1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
 											</figure>
 										</td>
-										<td class="cart-item">Пломбир с апельсиновым джемом</td>
+										<td class="cart-item-descr">Пломбир с апельсиновым джемом</td>
 										<td class="cart-weight">
 											1,5 кг х <span class="cart-weight-price">200 руб.</span>
 										</td>
 										<td class="cart-price">300 руб.</td>
 									</tr>
-									<tr>
+									<tr class="cart-item">
 										<td class="cart-delete">
 											<button type="button"><span class="visually-hidden">Удалить из корзины</span></button>
 										</td>
@@ -107,7 +107,7 @@
 												<img src="img/icecreames/3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
 											</figure>
 										</td>
-										<td class="cart-item">Клубничный пломбир с присыпкой из белого шоколада</td>
+										<td class="cart-item-descr">Клубничный пломбир с присыпкой из белого шоколада</td>
 										<td class="cart-weight">
 											1,5 кг х <span class="cart-weight-price">300 руб.</span>
 										</td>
@@ -117,32 +117,32 @@
 
 								<p class="cart-summary">Итого: <span class="cart-final-price">750 руб.</span></p>
 								<button type="submit" class="btn cart-order-btn">Оформить заказ</button>
-							</form>
 						</div>
 		  		</li>
 		  	</ul>
 		  </nav>
-			
-			<div class="header-info">
-	  		<p class="header-info-open-hours"><span class="visually-hidden">Мы открыты </span>С 10 до 20, ежедневно</p>
-	  		<p class="header-info-phone"><span class="visually-hidden">Звоните по номеру </span>8 812 450-25-25</p>
-	  	</div>
 
+		  <div class="header-bottom">
+
+			  <ul class="breadcrumbs">
+
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a>Сливочное</a></li>
+
+				</ul>
+				
+				<div class="header-info">
+		  		<p class="header-info-open-hours"><span class="visually-hidden">Мы открыты </span>С 10 до 20, ежедневно</p>
+		  		<p class="header-info-phone"><span class="visually-hidden">Звоните по номеру </span>8 812 450-25-25</p>
+		  	</div>
+			</div>
 
 		</header>
 
 		<!-- Main -->
 		
 		<main class="container catalog-main">
-
-
-			<ul class="breadcrumbs">
-
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="#">Каталог</a></li>
-				<li><a>Сливочное</a></li>
-
-			</ul>
 
 
 			<h1 class="main-title">Сливочное мороженое</h1>
@@ -154,7 +154,7 @@
 				
 				<div class="filter-element filter-sort-type">
 					<p class="filter-element-title">Сортировка:</p>
-					<div class="filter-element-substrate">
+					<div class="filter-element-substrate filter-sort-substrate">
 						<select name="sort-type" id="sort-type" class="sort-type">
 							<option value="popoular">по популярности</option>
 							<option value="cheap-first">сначала недорогие</option>
@@ -166,53 +166,59 @@
 				
 				<div class="filter-element filter-price-range">
 					<p class="filter-element-title">Цена: <span class="min-price">100</span> руб. – <span class="max-price">500</span> руб.</p>
-					<div class="filter-element-substrate">
+					<div class="filter-element-substrate price-range-substrate">
 						<div class="price-range"></div>
 					</div>
 				</div>
 				
 				<div class="filter-element filter-fat-content">
 					<p class="filter-element-title">Жирность:</p>
-					<div class="filter-element-substrate">
+					<div class="filter-element-substrate fat-content-substrate">
 						<label class="fat-content-radio">
-							<input type="radio" name="fat-content-percent" value="0"> 0%
+							<input type="radio" name="fat-content-percent" value="0"> 
+							<span class="input-value">0%</span>
 						</label>
 						<label class="fat-content-radio">
-							<input type="radio" name="fat-content-percent" value="<10" checked> до 10%
+							<input type="radio" name="fat-content-percent" value="<10" checked>
+							<span class="input-value">до 10%</span>
 						</label>
 						<label class="fat-content-radio">
-							<input type="radio" name="fat-content-percent" value="<30"> до 30%
+							<input type="radio" name="fat-content-percent" value="<30">
+							<span class="input-value">до 30%</span>
 						</label>
 						<label class="fat-content-radio">
-							<input type="radio" name="fat-content-percent" value=">30"> выше 30%
+							<input type="radio" name="fat-content-percent" value=">30">
+							<span class="input-value">выше 30%</span>
 						</label>
 					</div>
 				</div>
 				
-				<div class="filter-element filter-content">
+				<div class="filter-element filter-filling">
 					<p class="filter-element-title"> Наполнители:</p>
-					<div class="filter-element-substrate">
+					<div class="filter-element-substrate filling-substrate">
 						<label class="filling-check">
-							<input type="checkbox" name="filling" value="chocolate" checked> шоколадные
+							<input type="checkbox" name="filling" value="chocolate" checked> <span class="input-value">шоколадные</span>
 						</label>
 						<label class="filling-check">
-							<input type="checkbox" name="filling" value="sugar" checked> сахарные присыпки
+							<input type="checkbox" name="filling" value="sugar"  checked>
+							<span class="input-value">сахарные присыпки</span>
 						</label>
 						<label class="filling-check">
-							<input type="checkbox" name="filling" value="fruit"> фрукты
+							<input type="checkbox" name="filling" value="fruit">
+							<span class="input-value">фрукты</span>
 						</label>
 						<label class="filling-check">
-							<input type="checkbox" name="filling" value="syrup"> сиропы
+							<input type="checkbox" name="filling" value="syrup">
+							<span class="input-value">сиропы</span>
 						</label>
 						<label class="filling-check">
-							<input type="checkbox" name="filling" value="jam"> джемы
+							<input type="checkbox" name="filling" value="jam">
+							<span class="input-value">джемы</span>
 						</label>
 					</div>
 				</div>
 
-				<div class="filter-element-substrate">
-					<button type="button" class="filter-btn">Применить</button>
-				</div>
+				<button type="button" class="filter-btn">Применить</button>
 
 			</form>
 
@@ -264,7 +270,7 @@
 						<p class="price">325<span class="kilo">/кг</span></p>
 					</a>
 					<p class="product-descr">
-						<a href="#">Сливочное с брусничным джемом</a>
+						<a href="#">Сливочное с брусничным<br> джемом</a>
 					</p>
 					<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
 				</li>
@@ -304,7 +310,7 @@
 						<p class="price">440<span class="kilo">/кг</span></p>
 					</a>
 					<p class="product-descr">
-						<a href="#">Сливочно-ванильное с кусочками шоколада</a>
+						<a href="#">Сливочно-ванильное с<br> кусочками шоколада</a>
 					</p>
 					<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
 				</li>
@@ -342,13 +348,13 @@
 
 
 			<ul class="pagination">
-				<li class="pag-prev-btn"><button type="button"><span class="visually-hidden">Предыдущая страница</span></button></li>
+				<li class="pag-btn pag-prev-btn disabled-btn"><button type="button"><span class="visually-hidden">Предыдущая страница</span></button></li>
 				<li><a class="pagination-active">1</a></li>
 				<li><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
 				<li><a href="#">4</a></li>
 				<li><a href="#">5</a></li>
-				<li class="pag-next-btn"><button type="button"><span class="visually-hidden">Следующая страница</span></button></li>
+				<li class=" pag-btn pag-next-btn"><button type="button"><span class="visually-hidden">Следующая страница</span></button></li>
 			</ul>
 
 
@@ -412,5 +418,7 @@
 
 
 		</footer>
+
+		<script src="js/script.js"></script>
   </body>
 </html>

@@ -1,6 +1,3 @@
-var feedbackBtn 			= document.querySelector('.open-feedback-btn');
-var modalWindow 			= document.querySelector('.feedback-modal');
-var closeModal 				= document.querySelector('.modal-close');
 var sliderPagButtons 	= document.querySelectorAll('.slider-pagination button');
 var sliders 					=	document.querySelectorAll('.slider-item');
 var body 							= document.querySelector('body');
@@ -47,10 +44,69 @@ function toggleSlider(btn) {
 // 	var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
 // }
 
-feedbackBtn.addEventListener('click', function() {
-	modalWindow.style.display = 'flex';
-});
+var feedbackBtn 			= document.querySelector('.open-feedback-btn');
+var modalWindow 			= document.querySelector('.feedback-modal');
+var closeModal 				= document.querySelector('.modal-close');
 
-closeModal.addEventListener('click', function() {
-	modalWindow.style.display = 'none';
-});
+if(feedbackBtn) {
+	feedbackBtn.addEventListener('click', function() {
+		modalWindow.style.display = 'flex';
+	});
+}
+
+if(closeModal) {
+	closeModal.addEventListener('click', function() {
+		modalWindow.style.display = 'none';
+	});
+}
+
+
+
+var paginationButtons = document.querySelectorAll('.pagination a');
+var pagPrevBtn = document.querySelector('.pag-prev-btn');
+var pagNextBtn = document.querySelector('.pag-next-btn');
+
+console.log(paginationButtons);
+
+for (var i = 0; i < paginationButtons.length; i++) {
+
+	paginationButtons[i].addEventListener('click', function() {
+
+		for (var i = 0; i < paginationButtons.length; i++) {
+			paginationButtons[i].classList.remove('pagination-active');
+			paginationButtons[i].removeAttribute('href');
+			paginationButtons[i].setAttribute('href', '#');
+		}
+
+		this.removeAttribute('href');
+		this.classList.add('pagination-active');
+
+		if (paginationButtons[0].hasAttribute('href')) {
+		pagPrevBtn.classList.remove('disabled-btn');
+		} 
+
+		if (!paginationButtons[0].hasAttribute('href')) {
+		pagPrevBtn.classList.add('disabled-btn');
+		} 
+
+		if (paginationButtons[paginationButtons.length - 1].hasAttribute('href')) {
+			pagNextBtn.classList.remove('disabled-btn');
+		}
+
+		if (!paginationButtons[paginationButtons.length - 1].hasAttribute('href')) {
+			pagNextBtn.classList.add('disabled-btn');
+		}
+	});
+}
+
+// if (pagPrevBtn) {
+// 	pagPrevBtn.addEventListener('click', function() {
+
+
+
+// 		for (var i = 0; i < paginationButtons.length; i++) {
+// 			paginationButtons[i].classList.remove('pagination-active');
+// 		}
+// 	});
+
+// }
