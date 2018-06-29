@@ -10,6 +10,8 @@
   </head>
   <body>
 
+  	<div class="wrapper">
+
    <!-- Header -->
 
 		<header class="main-header container">
@@ -22,111 +24,122 @@
 
 		  	<ul class="site-nav">
 		  		<li class="site-nav-catalog">
-		  			<a href="#"><span class="strange-underline">Каталог</span></a>
+		  			<a href="#" class="site-nav-link">Каталог</a>
 		  			
-		  			<ul class="catalog-list hidden">
-		  				<li class="catalog-news"><a href="#">Новинки</a></li>
-		  				<li class="catalog-link">
-		  					<a href="catalog.html">Сливочное</a>
-		  				</li>
-		  				<li><a href="#">Щербеты</a></li>
-		  				<li><a href="#">Фруктовый лед</a></li>
-		  				<li><a href="#">Мелорин</a></li>
-		  			</ul>
+		  			<div class="catalog-list-wrapper hidden">
+			  			<ul class="catalog-list">
+			  				<li class="catalog-news"><a href="#">Новинки</a></li>
+			  				<li class="catalog-link">
+			  					<a href="catalog.html">Сливочное</a>
+			  				</li>
+			  				<li><a href="#">Щербеты</a></li>
+			  				<li><a href="#">Фруктовый лед</a></li>
+			  				<li><a href="#">Мелорин</a></li>
+			  			</ul>
+			  		</div>
 		  		</li>
-		  		<li><a href="#"><span class="strange-underline">Доставка и оплата</span></a></li>
-		  		<li><a href="#"><span class="strange-underline">О Компании</span></a></li>
+		  		<li><a href="#" class="site-nav-link">Доставка и оплата</a></li>
+		  		<li><a href="#" class="site-nav-link">О Компании</a></li>
 		  	</ul>
 
 		  	<ul class="user-nav">
 		  		<li class="user-nav-search">
 		  			<a href="#" class="user-nav-search-link"><span class="visually-hidden">Окно поиска</span></a>
-
-		  			<div class="user-nav-search-window hidden">
-							<form action="." method="get">
-								<label class="search-input-area">
-									<span class="visually-hidden">Поиск по сайту</span>
-		  						<input type="text" class="search-field" placeholder="Что ищем?">
-		  					</label>
-		  				</form>
-		  			</div>
+						
+						<div class="user-nav-search-wrapper hidden">
+			  			<div class="user-nav-search-window">
+								<form action="." method="get">
+									<label class="search-input-area">
+										<span class="visually-hidden">Поиск по сайту</span>
+			  						<input type="text" class="search-field" placeholder="Что ищем?">
+			  					</label>
+			  				</form>
+			  			</div>
+			  		</div>
 		  		</li>
 
 		  		<li class="user-nav-login">
-		  			<a href="/autorization.html" class="user-nav-login-link">Вход</a>
-		  			<div class="user-nav-login-window hidden">
-			  			<form action="." class="login-form">
-			  				<label class="login-input-area">
-			  					<span class="visually-hidden">Введите Вашу электронную почту</span>
-				  				<input class="login-input-field" type="email" placeholder="Электронная почта">
-				  			</label>
-				  			<label class="login-input-area">
-				  				<span class="visually-hidden">Введите пароль</span>
-			  					<input class="login-input-field" type="password" placeholder="Пароль">
-			  				</label>
-			  				<div class="login-form-bottom">
-				  				<button type="button" class="btn login-form-btn">Войти</button>
-				  				<p class="login-form-bottom-links">
-					  				<a href="#" class="login-form-link"><span class="strange-underline">Забыли пароль?</span></a>
-					  				<a href="#" class="login-form-link"><span class="strange-underline">Новая регистрация</span></a>
-					  			</p>
-				  			</div>
-			  			</form>
-			  		</div>
+		  			<a href="#" class="user-nav-login-link">Вход</a>
+
+		  			<div class="user-nav-login-wrapper hidden">
+			  			<div class="user-nav-login-window">
+				  			<form action="." method="get" class="login-form">
+				  				<label class="login-input-area">
+				  					<span class="visually-hidden">Введите Вашу электронную почту</span>
+					  				<input class="login-input-field" type="email" placeholder="Электронная почта">
+					  			</label>
+					  			<label class="login-input-area">
+					  				<span class="visually-hidden">Введите пароль</span>
+				  					<input class="login-input-field" type="password" placeholder="Пароль">
+				  				</label>
+				  				<div class="login-form-bottom">
+					  				<button type="button" class="btn login-form-btn">Войти</button>
+					  				<p class="login-form-bottom-links">
+						  				<a href="#" class="login-form-link">Забыли пароль?</a>
+						  				<a href="#" class="login-form-link">Новая регистрация</a>
+						  			</p>
+					  			</div>
+				  			</form>
+				  		</div>
+				  	</div>
 		  		</li>
 
 		  		<li class="user-nav-cart user-nav-cart-empty">
 		  			<h3 class="visually-hidden">Корзина</h3>
-		  			<a href="/cart.html" class="user-nav-cart-link">Пусто</a>
+		  			<a href="#" class="user-nav-cart-link">Пусто</a>
 		  		</li>
+
 		  		<li class="user-nav-cart user-nav-cart-full hidden">
 		  			<h3 class="visually-hidden">Корзина</h3>
-		  			<a class="user-nav-cart-link" href="cart.html">2 товара</a>
+		  			<a class="user-nav-cart-link" href="#">2 товара</a>
 
-		  			<div class="user-nav-hidden-window">
-		  				<form action="." method="get">
-			  				<table class="cart-list">
-									<tr>
-										<td class="cart-delete">
-											<button type="button"><span class="visually-hidden">Удалить из корзины</span></button>
-										</td>
-										<td class="cart-img">
-											<figure class="cart-img-figure">
-												<img src="img/icecreames/1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
-											</figure>
-										</td>
-										<td class="cart-item">Пломбир с апельсиновым джемом</td>
-										<td class="cart-weight">
-											1,5 кг х <span class="cart-weight-price">200 руб.</span>
-										</td>
-										<td class="cart-price">300 руб.</td>
-									</tr>
-									<tr>
-										<td class="cart-delete">
-											<button type="button"><span class="visually-hidden">Удалить из корзины</span></button>
-										</td>
-										<td class="cart-img">
-											<figure class="cart-img-figure">
-												<img src="img/icecreames/3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
-											</figure>
-										</td>
-										<td class="cart-item">Клубничный пломбир с присыпкой из белого шоколада</td>
-										<td class="cart-weight">
-											1,5 кг х <span class="cart-weight-price">300 руб.</span>
-										</td>
-										<td class="cart-price">450 руб.</td>
-									</tr>
-								</table>
+						<div class="user-nav-cart-wrapper hidden">
+			  			<div class="user-nav-cart-window">
+			  				<form action="." method="get">
+				  				<table class="cart-list">
+										<tr>
+											<td class="cart-delete">
+												<button type="button"><span class="visually-hidden">Удалить из корзины</span></button>
+											</td>
+											<td class="cart-img">
+												<figure class="cart-img-figure">
+													<img src="img/icecreames/1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
+												</figure>
+											</td>
+											<td class="cart-item">Пломбир с апельсиновым джемом</td>
+											<td class="cart-weight">
+												1,5 кг х <span class="cart-weight-price">200 руб.</span>
+											</td>
+											<td class="cart-price">300 руб.</td>
+										</tr>
+										<tr>
+											<td class="cart-delete">
+												<button type="button"><span class="visually-hidden">Удалить из корзины</span></button>
+											</td>
+											<td class="cart-img">
+												<figure class="cart-img-figure">
+													<img src="img/icecreames/3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
+												</figure>
+											</td>
+											<td class="cart-item">Клубничный пломбир с присыпкой из белого шоколада</td>
+											<td class="cart-weight">
+												1,5 кг х <span class="cart-weight-price">300 руб.</span>
+											</td>
+											<td class="cart-price">450 руб.</td>
+										</tr>
+									</table>
 
-								<p class="cart-summary">Итого: <span class="cart-final-price">750 руб.</span></p>
-								<button type="submit" class="btn cart-order-btn">Оформить заказ</button>
-							</form>
+									<p class="cart-summary">Итого: <span class="cart-final-price">750 руб.</span></p>
+									<button type="submit" class="btn cart-order-btn">Оформить заказ</button>
+								</form>
+							</div>
 						</div>
 		  		</li>
 		  	</ul>
 		  </nav>
 
 		  <div class="header-bottom">
+		  	
 				<div class="header-info">
 		  		<p class="header-info-open-hours"><span class="visually-hidden">Мы открыты </span>С 10 до 20, ежедневно</p>
 		  		<p class="header-info-phone"><span class="visually-hidden">Звоните по номеру </span>8 812 450-25-25</p>
@@ -204,7 +217,11 @@
 					<li class="product-item hit">
 						<a href="#" class="product-item-img-price">
 							<img src="img/icecreames/1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-							<p class="price">310<span class="kilo">/кг</span></p>
+							<p class="price">310<svg  xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
+	
+	<path class="svg" fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+
+</svg><span class="kilo">/кг</span></p>
 						</a>
 						<p class="product-descr">
 							<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -255,7 +272,7 @@
 					<li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
 					<li>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
 					<li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-					<li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+					<li>Доставка нашего мороженого до заказчиков&nbsp;осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
 				</ul>
 			</article>
 
@@ -292,31 +309,35 @@
 
 				<h2 class="visually-hidden">Карта с нашим адресом</h2>
 
-				<!-- <div id="google-map" width="1200" height="430"></div> -->
+				<!-- <div class="google-map" width="1200" height="430"></div> -->
 
-				<img class="map-img" src="img/map.png" alt="Карта" width="1200" height="432">
 
-			<!-- 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.1624753256606!2d30.32384233574676!3d59.93945686350591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+Street%2C+19%2C+Sankt-Peterburg%2C+Rusko%2C+191186!5e0!3m2!1scs!2scz!4v1529520715638" width="1200" height="429" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+				<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.1624753256606!2d30.32384233574676!3d59.93945686350591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+Street%2C+19%2C+Sankt-Peterburg%2C+Rusko%2C+191186!5e0!3m2!1scs!2scz!4v1529520715638" allowfullscreen></iframe>
 
-				<section class="map-contacts">
+				<div class="map-section">
 
-					<h3 class="visually-hidden">Контакты</h3>
-					
-					<div class="map-info">
-						<p>
-							Адрес главного офиса и&nbsp;офлайн-магазина:
-							<span class="map-big-font map-big-font-adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-						</p>
+					<img class="map-img" src="img/map.png" alt="Карта" width="1200" height="432">
 
-						<p>
-							Для заказов по телефону:
-							<span class="map-big-font map-big-font-phone">8 812 450-25-25</span>
-							(с 10 до 20 ежедневно)
-						</p>
-					</div>
+					<section class="map-contacts">
 
-						<button type="button" class="btn open-feedback-btn">Форма обратной связи</button>
-				</section>
+						<h3 class="visually-hidden">Контакты</h3>
+						
+						<div class="map-info">
+							<p>
+								Адрес главного офиса и&nbsp;офлайн-магазина:
+								<span class="map-big-font map-big-font-adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+							</p>
+
+							<p>
+								Для заказов по телефону:
+								<span class="map-big-font map-big-font-phone">8 812 450-25-25</span>
+								(с 10 до 20 ежедневно)
+							</p>
+						</div>
+
+							<button type="button" class="btn open-feedback-btn">Форма обратной связи</button>
+					</section>
+				</div>
 			</section>
 
 		</main>
@@ -376,6 +397,8 @@
 			</div>
 		</footer>
 
+		</div>
+
 		<!-- Modal -->
 
 		<div class="overlay"></div>
@@ -404,5 +427,6 @@
 		</section>
 
 		<script src="js/script.js"></script>
+		<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAlUEOV66Tm-qSap3AscinxaLdrzR1HU0&callback=myMap"></script> -->
   </body>
 </html>

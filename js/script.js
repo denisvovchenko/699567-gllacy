@@ -46,10 +46,10 @@ function toggleSlider(btn) {
 
 var feedbackBtn 			= document.querySelector('.open-feedback-btn');
 var popup 						= document.querySelector('.feedback-modal');
-var popupWindow 			= popup.querySelector('.modal-inner');
+var popupWindow 			= document.querySelector('.modal-inner');
 var overlay 	 				= document.querySelector('.overlay');
-var closeModal 				= popup.querySelector('.modal-close');
-var form 							= popup.querySelector('.feedback-form');
+var closeModal 				= document.querySelector('.modal-close');
+var form 							= document.querySelector('.feedback-form');
 var userName 					= document.querySelector('.feedback-name-field');
 var userEmail 				= document.querySelector('.feedback-email-field');
 var userMessage				= document.querySelector('.user-message-area');
@@ -158,4 +158,15 @@ for (var i = 0; i < paginationButtons.length; i++) {
 			pagNextBtn.classList.add('disabled-btn');
 		}
 	});
+}
+
+
+
+
+function showMap() {
+	var mapProp = {
+		center: new google.maps.LatLng(59.938805, 30.323045),
+		zoom: 100
+	};
+	var map = new google.maps.Map(document.querySelector('.google-map'), mapProp);
 }
