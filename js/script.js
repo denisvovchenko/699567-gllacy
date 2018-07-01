@@ -162,10 +162,10 @@ for (var i = 0; i < paginationButtons.length; i++) {
 
 
 
-function showMap() {
-	var mapProp = {
-		center: new google.maps.LatLng(59.938805, 30.323045),
-		zoom: 100
-	};
-	var map = new google.maps.Map(document.querySelector('.google-map'), mapProp);
-}
+// function showMap() {
+// 	var mapProp = {
+// 		center: new google.maps.LatLng(59.938805, 30.323045),
+// 		zoom: 100
+// 	};
+// 	var map = new google.maps.Map(document.querySelector('.google-map'), mapProp);
+// }

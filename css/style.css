@@ -931,11 +931,15 @@ button.slider-pagination-active {
 	line-height: 22px;
 }
 
+.btn-wrapper {
+	display: flex;
+	margin-top: auto;
+}
+
 .offer-btn {
 	display: block;
 	padding: 10px 23px 12px 22px;
 	margin-left: auto;
-	margin-top: auto;
 
 	font-size: 18px;
 	line-height: 24px;
@@ -1163,16 +1167,16 @@ button.slider-pagination-active {
 	position: absolute;
 	left: 0;
 	right: 0;
-	z-index: 2;
+	z-index: 1;
 
-	display: none;
+	/*display: none;*/
 	width: 100%;
 	min-height: 430px;
 
 	border: none;
 }
 
-.google-map {
+/*.google-map {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -1182,7 +1186,7 @@ button.slider-pagination-active {
 	height: 430px;
 
 	border: none;
-}
+}*/
 
 img.map-img {
 	position: absolute;
@@ -1407,6 +1411,8 @@ img.map-img {
 	height: 4px;
 
 	background: linear-gradient(to right, rgba(248, 247, 244, 0.5) 15%, #f8f7f4 15%, #f8f7f4 67%, rgba(248, 247, 244, 0.5) 67%);
+
+	cursor: pointer;
 }
 
 .price-range::before,
@@ -1427,11 +1433,6 @@ img.map-img {
 
 .price-range::after {
 	right: 22%;
-}
-
-.price-range:hover::before,
-.price-range:hover::after {
-	cursor: pointer;
 }
 
 .fat-content-substrate {
@@ -1458,7 +1459,6 @@ img.map-img {
 	left: 0px;
 
 	opacity: 0.8;
-	cursor: pointer;
 }
 
 .fat-content-radio input:disabled ~ .input-value::before,
@@ -1482,6 +1482,11 @@ input[name="fat-content-percent"]:focus ~ .input-value::before {
 .fat-content-radio input:checked ~ .input-value::before {
 	background: url("../img/svg/radio-on.svg") no-repeat;
 	background-size: 22px 22px;
+}
+
+.fat-content-radio,
+.filling-check {
+	cursor: pointer;
 }
 
 .fat-content-radio:hover .input-value::before,
@@ -1649,27 +1654,6 @@ input[name="filling"]:focus:checked ~ .input-value::before {
 	text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-@media screen and (max-width: 900px) {
-	.product-item-img-price img {
-		width: 200px;
-		height: 200px;
-	}
-
-	.product-item-img-price {
-		margin-bottom: 8px;
-	}
-
-	.product-item-img-price .price {
-		position: absolute;
-		bottom: 17px;
-		left: 0;
-	}
-
-	.product-descr {
-		max-width: 185px;
-	}
-}
-
 .product-item-img-price .kilo {
 	position: relative;
 
@@ -1691,6 +1675,7 @@ input[name="filling"]:focus:checked ~ .input-value::before {
 }
 
 .product-descr {
+	max-width: 260px;
 	margin: 0 auto 10px;
 
 	font-weight: 500;
@@ -1709,6 +1694,27 @@ input[name="filling"]:focus:checked ~ .input-value::before {
 
 	background: linear-gradient(to top, rgba(255,188,158, 0.3) 1px, transparent 1px);
 	outline: none;
+}
+
+@media (max-width: 900px) {
+	.product-item-img-price img {
+		width: 200px;
+		height: 200px;
+	}
+
+	.product-item-img-price {
+		margin-bottom: 8px;
+	}
+
+	.product-item-img-price .price {
+		position: absolute;
+		bottom: 17px;
+		left: 0;
+	}
+
+	.product-descr {
+		max-width: 185px;
+	}
 }
 
 .fast-view-btn {
@@ -1951,6 +1957,7 @@ input[name="filling"]:focus:checked ~ .input-value::before {
 	position: relative;
 
 	display: flex;
+	align-self: center;
 	flex-direction: column;
 	width: 477px;
 	padding: 16px 25px 27px 23px;
