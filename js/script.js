@@ -5,58 +5,52 @@ var sliderImage2			= new Image(1045, 881);
 var sliderImage3			= new Image(1045, 881);
 		sliderImage3.src 	= 'img/slider-img/slider-3.png';
 
-var sliderPagButtons 	= document.querySelectorAll('.slider-pagination button');
-var sliders 					=	document.querySelectorAll('.slider-item');
-var body 							= document.querySelector('body');
-var paginationButtons = document.querySelectorAll('.pagination a');
-var pagPrevBtn 				= document.querySelector('.pag-prev-btn');
-var pagNextBtn 				= document.querySelector('.pag-next-btn');
+var sliderPagButtons 	= document.querySelectorAll('.slider-pagination button'),
+		sliders 					=	document.querySelectorAll('.slider-item'),
+		body 							= document.body,
+		paginationButtons = document.querySelectorAll('.pagination a'),
+		pagPrevBtn 				= document.querySelector('.pag-prev-btn'),
+		pagNextBtn 				= document.querySelector('.pag-next-btn');
 
 
 
-for (let i = 0; i < sliderPagButtons.length; i++) {
-
-	sliderPagButtons[i].addEventListener('click', function() {
-		toggleSlider(i);
-	});
+for (var i = 0; i < sliderPagButtons.length; i++) {
+  toggleSlider(i);
 }
 
 function toggleSlider(btn) {
+  sliderPagButtons[btn].addEventListener('click', function() {
+    for (var i = 0; i < sliderPagButtons.length; i++) {
+      sliderPagButtons[i].classList.remove('slider-pagination-active');
+      sliders[i].classList.remove('slider-item-active');
+    };
 
-	for (var i = 0; i < sliderPagButtons.length; i++) {
-			sliderPagButtons[i].classList.remove('slider-pagination-active');
-			sliders[i].classList.remove('slider-item-active');		
-		};
+    if (btn == 0) {
+        body.style.background = '#849d8f url("img/slider-img/slider-1.png") no-repeat center top';
+      } else if (btn == 1) {
+        body.style.background = '#8996a6 url("img/slider-img/slider-2.png") no-repeat center top';
+      } else if (btn == 2) {
+        body.style.background = '#9d8b84 url("img/slider-img/slider-3.png") no-repeat center top';
+      };
 
-	if (btn == 0) {
-			body.style.background = '#849d8f url("img/slider-img/slider-1.png") no-repeat center top';
-		} else if (btn == 1) {
-			body.style.background = '#8996a6 url("img/slider-img/slider-2.png") no-repeat center top';
-		} else if (btn == 2) {
-			body.style.background = '#9d8b84 url("img/slider-img/slider-3.png") no-repeat center top';
-		};
-
-	sliderPagButtons[btn].classList.add('slider-pagination-active');
-	sliders[btn].classList.add('slider-item-active');
+    sliderPagButtons[btn].classList.add('slider-pagination-active');
+    sliders[btn].classList.add('slider-item-active');
+  });
 };
 
+var feedbackBtn 			= document.querySelector('.open-feedback-btn'),
+		popup 						= document.querySelector('.feedback-modal'),
+		popupWindow 			= document.querySelector('.modal-inner'),
+		overlay 	 				= document.querySelector('.overlay'),
+		closeModal 				= document.querySelector('.modal-close'),
+		form 							= document.querySelector('.feedback-form'),
+		userName 					= document.querySelector('.feedback-name-field'),
+		userEmail 				= document.querySelector('.feedback-email-field'),
+		userMessage				= document.querySelector('.user-message-area');
 
-
-
-
-var feedbackBtn 			= document.querySelector('.open-feedback-btn');
-var popup 						= document.querySelector('.feedback-modal');
-var popupWindow 			= document.querySelector('.modal-inner');
-var overlay 	 				= document.querySelector('.overlay');
-var closeModal 				= document.querySelector('.modal-close');
-var form 							= document.querySelector('.feedback-form');
-var userName 					= document.querySelector('.feedback-name-field');
-var userEmail 				= document.querySelector('.feedback-email-field');
-var userMessage				= document.querySelector('.user-message-area');
-
-var isStorageSupport 		= true;
-var nameStorage				= '';
-var emailStorage 			= '';
+		isStorageSupport 		= true;
+		nameStorage				= '';
+		emailStorage 			= '';
 
 try {
 	nameStorage				= localStorage.getItem('name');
@@ -64,7 +58,6 @@ try {
 } catch (err) {
 	isStorageSupport 	= false;
 }
-
 
 if (feedbackBtn) {
 
@@ -87,8 +80,17 @@ if (feedbackBtn) {
 	});
 }
 
-if(closeModal) {
+if (closeModal) {
 	closeModal.addEventListener('click', function(evt) {
+		evt.preventDefault();
+		popup.classList.remove('modal-show');
+		overlay.classList.remove('overlay-show');
+		popupWindow.classList.remove('modal-error');
+	});
+}
+
+if (overlay) {
+	overlay.addEventListener('click', function(evt) {
 		evt.preventDefault();
 		popup.classList.remove('modal-show');
 		overlay.classList.remove('overlay-show');
@@ -112,7 +114,6 @@ if (form) {
 	});
 }
 
-
 window.addEventListener('keydown', function (evt) {
 	if (evt.keyCode === 27) {
 		evt.preventDefault();
@@ -124,10 +125,6 @@ window.addEventListener('keydown', function (evt) {
 		}
 	}
 });
-
-
-
-
 
 for (var i = 0; i < paginationButtons.length; i++) {
 
@@ -160,12 +157,31 @@ for (var i = 0; i < paginationButtons.length; i++) {
 	});
 }
 
+try {
+	function showMap() {
+		var myCenter = new google.maps.LatLng(59.938805, 30.323045),
+				markerIcon = {
+					url: './img/svg/pin.svg',
+					scaledSize: new google.maps.Size(80, 140)
+				},
 
+				mapProp = {
+					center: myCenter,
+					zoom: 16
+				},
 
-// function showMap() {
-// 	var mapProp = {
-// 		center: new google.maps.LatLng(59.938805, 30.323045),
-// 		zoom: 100
-// 	};
-// 	var map = new google.maps.Map(document.querySelector('.google-map'), mapProp);
-// }
+				map = new google.maps.Map(document.querySelector('.google-map'), mapProp),
+
+				marker = new google.maps.Marker({
+					position: myCenter,
+					map: map,
+					optimized: false,
+					icon: markerIcon
+				});
+
+		marker.setMap(map);
+
+	}
+
+	showMap();
+} catch (err) {}
