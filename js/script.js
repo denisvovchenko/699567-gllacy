@@ -12,8 +12,6 @@ var sliderPagButtons 	= document.querySelectorAll('.slider-pagination button'),
 		pagPrevBtn 				= document.querySelector('.pag-prev-btn'),
 		pagNextBtn 				= document.querySelector('.pag-next-btn');
 
-
-
 for (var i = 0; i < sliderPagButtons.length; i++) {
   toggleSlider(i);
 }
@@ -46,17 +44,16 @@ var feedbackBtn 			= document.querySelector('.open-feedback-btn'),
 		form 							= document.querySelector('.feedback-form'),
 		userName 					= document.querySelector('.feedback-name-field'),
 		userEmail 				= document.querySelector('.feedback-email-field'),
-		userMessage				= document.querySelector('.user-message-area');
-
-		isStorageSupport 		= true;
-		nameStorage				= '';
+		userMessage				= document.querySelector('.user-message-area'),
+		isStorageSupport 	= true,
+		nameStorage				= '',
 		emailStorage 			= '';
 
 try {
-	nameStorage				= localStorage.getItem('name');
-	emailStorage 			= localStorage.getItem('email');
+	nameStorage					= localStorage.getItem('name');
+	emailStorage 				= localStorage.getItem('email');
 } catch (err) {
-	isStorageSupport 	= false;
+	isStorageSupport 		= false;
 }
 
 if (feedbackBtn) {
@@ -66,7 +63,6 @@ if (feedbackBtn) {
 		popup.classList.add('modal-show');
 		overlay.classList.add('overlay-show');
 
-		
 		if (nameStorage && emailStorage) {
 			userName.value 	= nameStorage;
 			userEmail.value = emailStorage;

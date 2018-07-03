@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+  	<meta content="telephone=no" name="format-detection" />
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize-mini.css">
+    <link rel="stylesheet" href="css/style-mini.css" />
   </head>
   <body class="inner-page">
 
   	<div class="wrapper">
-
-	   <!-- Header -->
 
 			<header class="main-header container">
 
@@ -20,11 +20,13 @@
 
 			  	<h2 class="visually-hidden">Навигация по сайту</h2>
 
-			  	<a class="main-logo" href="index.html"><img src="img/svg/logo.svg" alt="Логотип магазина Gllacy" width="154" height="64"></a>
+			  	<a class="main-logo" href="index.html">
+			  		<img src="img/svg/logo.svg" alt="Логотип магазина Gllacy" width="154" height="64">
+			  	</a>
 
 			  	<ul class="site-nav">
 			  		<li class="site-nav-item site-nav-catalog current-page">
-			  			<a href="#" class="site-nav-link">Каталог</a>
+			  			<a class="site-nav-link" href="#">Каталог</a>
 
 			  			<div class="catalog-list-wrapper hidden">
 				  			<ul class="catalog-list">
@@ -45,38 +47,44 @@
 				  				</li>
 				  			</ul>
 				  		</div>
+
 			  		</li>
 			  		<li class="site-nav-item">
-			  			<a href="#" class="site-nav-link">Доставка и оплата</a>
+			  			<a class="site-nav-link" href="#">Доставка и оплата</a>
 			  		</li>
 			  		<li class="site-nav-item">
-			  			<a href="#" class="site-nav-link">О Компании</a>
+			  			<a class="site-nav-link" href="#">О Компании</a>
 			  		</li>
 			  	</ul>
 
 			  	<ul class="user-nav">
 
 			  		<li class="user-nav-item user-nav-search">
-			  			<a href="#" class="user-nav-link user-nav-search-link"><span class="visually-hidden">Окно поиска</span></a>
+
+			  			<a class="user-nav-link user-nav-search-link" href="#">
+			  				<span class="visually-hidden">Окно поиска</span>
+			  			</a>
 							
 							<div class="user-nav-search-wrapper hidden">
 				  			<div class="user-nav-search-window">
 									<form action="." method="get">
 										<label class="search-input-area">
 											<span class="visually-hidden">Поиск по сайту</span>
-				  						<input type="text" class="search-field" placeholder="Что ищем?">
+				  						<input class="search-field" type="text" placeholder="Что ищем?">
 				  					</label>
 				  				</form>
 				  			</div>
 				  		</div>
-			  		</li>
 
+			  		</li>
 			  		<li class="user-nav-item user-nav-login">
-			  			<a href="#" class="user-nav-link user-nav-login-link">Вход</a>
+
+			  			<a class="user-nav-link user-nav-login-link" href="#">Вход</a>
 
 			  			<div class="user-nav-login-wrapper hidden">
+
 				  			<div class="user-nav-login-window">
-					  			<form action="." method="get" class="login-form">
+					  			<form class="login-form" action="." method="get">
 					  				<label class="login-input-area">
 					  					<span class="visually-hidden">Введите Вашу электронную почту</span>
 						  				<input class="login-input-field" type="email" placeholder="Электронная почта">
@@ -86,25 +94,24 @@
 					  					<input class="login-input-field" type="password" placeholder="Пароль">
 					  				</label>
 					  				<div class="login-form-bottom">
-						  				<button type="button" class="btn login-form-btn">Войти</button>
+						  				<button class="btn login-form-btn" type="button">Войти</button>
 						  				<p class="login-form-bottom-links">
-							  				<a href="#" class="login-form-link">Забыли пароль?</a>
-							  				<a href="#" class="login-form-link">Новая регистрация</a>
+							  				<a class="login-form-link" href="#">Забыли пароль?</a>
+							  				<a class="login-form-link" href="#">Новая регистрация</a>
 							  			</p>
 						  			</div>
 					  			</form>
 					  		</div>
+
 					  	</div>
 			  		</li>
-
 			  		<li class="user-nav-item user-nav-cart user-nav-cart-empty hidden">
 			  			<h3 class="visually-hidden">Корзина</h3>
 			  			<a class="user-nav-link user-nav-cart-link">Пусто</a>
 			  		</li>
-
 			  		<li class="user-nav-item user-nav-cart user-nav-cart-full">
 			  			<h3 class="visually-hidden">Корзина</h3>
-			  			<a href="#" class="user-nav-link user-nav-cart-link">2 товара</a>
+			  			<a class="user-nav-link user-nav-cart-link" href="#">2 товара</a>
 
 			  			<div class="user-nav-cart-wrapper hidden">
 				  			<div class="user-nav-cart-window">
@@ -143,22 +150,26 @@
 										</table>
 
 										<p class="cart-summary">Итого: <span class="cart-final-price">750 руб.</span></p>
-										<button type="submit" class="btn cart-order-btn">Оформить заказ</button>
+										<button class="btn cart-order-btn" type="submit">Оформить заказ</button>
 									</form>
 								</div>
 							</div>
+
 			  		</li>
 			  	</ul>
 			  </nav>
 
 			  <div class="header-bottom">
-
 				  <ul class="breadcrumbs">
-
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="#">Каталог</a></li>
-						<li><a>Сливочное</a></li>
-
+						<li>
+							<a href="index.html">Главная</a>
+						</li>
+						<li>
+							<a href="#">Каталог</a>
+						</li>
+						<li>
+							<a>Сливочное</a>
+						</li>
 					</ul>
 					
 					<div class="header-info">
@@ -168,23 +179,19 @@
 				</div>
 
 			</header>
-
-			<!-- Main -->
 			
 			<main class="catalog-main container">
 
-
 				<h1 class="main-title">Сливочное мороженое</h1>
 
-
-				<form action="https://echo.htmlacademy.ru" method="get" class="filter">
+				<form class="filter" action="https://echo.htmlacademy.ru" method="get">
 
 					<h2 class="visually-hidden">Фильтр</h2>
 					
 					<div class="filter-element filter-sort-type">
 						<p class="filter-element-title">Сортировка:</p>
 						<div class="filter-element-substrate filter-sort-substrate">
-							<select name="sort-type" id="sort-type" class="sort-type">
+							<select class="sort-type" id="sort-type" name="sort-type">
 								<option value="popular">по популярности</option>
 								<option value="cheap-first">сначала недорогие</option>
 								<option value="expensive-first">сначала дорогие</option>
@@ -249,10 +256,9 @@
 						</div>
 					</div>
 
-					<button type="submit" class="filter-btn">Применить</button>
+					<button class="filter-btn" type="submit">Применить</button>
 
 				</form>
-
 
 				<ul class="product-list">
 					<li class="product-item">
@@ -265,7 +271,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -277,7 +283,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочно-кофейное с кусочками шоколада</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -289,7 +295,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -301,7 +307,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -313,7 +319,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочное с брусничным джемом</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -325,7 +331,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочно-черничное с цельными ягодами черники</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -337,7 +343,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -349,7 +355,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочное с шоколадной стружкой</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -361,7 +367,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочно-ванильное с кусочками&nbsp;шоколада</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -373,7 +379,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочноe с ментоловым сиропом</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -385,7 +391,7 @@
 						<p class="product-descr">
 							<a href="#">Сливочное с кусочками черного шоколада</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 					<li class="product-item">
 						<div class="product-item-img-price">
@@ -397,52 +403,71 @@
 						<p class="product-descr">
 							<a href="#">Сливочное с мятным сиропом</a>
 						</p>
-						<a href="#" class="btn fast-view-btn">Быстрый просмотр</a>
+						<a class="btn fast-view-btn" href="#">Быстрый просмотр</a>
 					</li>
 				</ul>
 
-
 				<ul class="pagination">
-					<li class="pag-btn pag-prev-btn disabled-btn"><button type="button"><span class="visually-hidden">Предыдущая страница</span></button></li>
-					<li><a class="pagination-active">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li class=" pag-btn pag-next-btn"><button type="button"><span class="visually-hidden">Следующая страница</span></button></li>
+					<li class="pag-btn pag-prev-btn disabled-btn">
+						<button type="button">
+							<span class="visually-hidden">Предыдущая страница</span>
+						</button>
+					</li>
+					<li>
+						<a class="pagination-active">1</a>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+					<li>
+						<a href="#">3</a>
+					</li>
+					<li>
+						<a href="#">4</a>
+					</li>
+					<li>
+						<a href="#">5</a>
+					</li>
+					<li class="pag-btn pag-next-btn">
+						<button type="button">
+							<span class="visually-hidden">Следующая страница</span>
+						</button>
+					</li>
 				</ul>
 
-
 			</main>
-			
-			<!-- Footer -->
 
 			<footer class="main-footer container">
 
 				<div class="footer-social">
 					<h3 class="visually-hidden">Ссылки на социальные сети</h3>
 					<ul class="social-networks">
-
 						<li class="social-btn social-btn-twitter">
-							<a href="http://www.twitter.com"><span class="visually-hidden">Twitter</span></a>
+							<a href="http://www.twitter.com">
+								<span class="visually-hidden">Twitter</span>
+							</a>
 						</li>
 						<li class="social-btn social-btn-instagram">
-							<a href="http://www.instagram.com"><span class="visually-hidden">Instagram</span></a>
+							<a href="http://www.instagram.com">
+								<span class="visually-hidden">Instagram</span>
+							</a>
 						</li>
 						<li class="social-btn social-btn-facebook">
-							<a href="http://www.facebook.com"><span class="visually-hidden">Facebook</span></a>
+							<a href="http://www.facebook.com">
+								<span class="visually-hidden">Facebook</span>
+							</a>
 						</li>
 						<li class="social-btn social-btn-vkontakte">
-							<a href="http://www.vk.com"><span class="visually-hidden">ВКонтакте</span></a>
+							<a href="http://www.vk.com">
+								<span class="visually-hidden">ВКонтакте</span>
+							</a>
 						</li>
-
 					</ul>
 				</div>
 				
 				<div class="footer-nav">
 					<h3 class="visually-hidden">Полезные ссылки</h3>
 					<ul class="footer-nav-list">
-
 						<li class="footer-nav-special">
 							<a href="#">Для поставщиков</a>
 						</li>
@@ -459,7 +484,6 @@
 				</div>
 
 				<div class="footer-copyright">
-
 					<p class="academy-logo">
 						<a href="https://htmlacademy.ru/intensive/htmlcss">
 							<img src="img/svg/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="108" height="39">
@@ -468,14 +492,11 @@
 					<p class="made-in">
 						Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
 					</p>
-
 				</div>
 
-
 			</footer>
-		
 		</div>
 
-		<script src="js/script.js"></script>
+		<script src="js/script-mini.js"></script>
   </body>
 </html>
