@@ -177,6 +177,7 @@ textarea:focus {
 a.login-form-link,
 .breadcrumbs a,
 .slider-pagination button,
+.offer-btn,
 .product-item img,
 .product-descr a,
 .news-post a,
@@ -985,6 +986,11 @@ button.slider-pagination-active {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-ms-flex-line-pack: start;
+	    align-content: flex-start;
 	padding: 0;
 	margin: 0;
 	margin-bottom: 32px;
@@ -1098,7 +1104,7 @@ button.slider-pagination-active {
 
 	color: #323232;
 
-	background: #ebe0cc url("../img/bgimages/bg-waffle.jpg") repeat -5%;
+	background: #ebe0cc url("../img/bgimages/bg-waffle.jpg") no-repeat -5%;
 	background-size: cover;
 	border-radius: 15px;
 }
@@ -1193,6 +1199,11 @@ button.slider-pagination-active {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-ms-flex-line-pack: start;
+	    align-content: flex-start;
 	margin-bottom: 40px;
 }
 
@@ -1200,6 +1211,7 @@ button.slider-pagination-active {
 	-ms-flex-preferred-size: 48.9%;
 	    flex-basis: 48.9%;
 	max-width: 48.9%;
+	min-height: 220px;
 	padding: 23px 2% 0 19px;
 
 	color: #323232;
@@ -1668,24 +1680,33 @@ img.map-img {
 	cursor: pointer;
 }
 
-.price-range::before,
-.price-range::after {
-	content: "";
+.price-range-min,
+.price-range-max {
 	position: absolute;
 	top: -9px;
 
-	width: 25px;
-	height: 25px;
+	width: 20px;
+	height: 20px;
 
 	background: url("../img/svg/filter-button.svg") no-repeat;
+	background-size: cover;
+	border-radius: 50%;
 }
 
-.price-range::before {
+.price-range-min {
 	left: 8%;
 }
 
-.price-range::after {
+.price-range-max {
 	right: 22%;
+}
+
+.price-range-min:hover,
+.price-range-max:hover {
+	top: -9.5px;
+
+	width: 22px;
+	height: 22px;
 }
 
 .fat-content-substrate {

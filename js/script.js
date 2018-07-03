@@ -24,7 +24,7 @@ function toggleSlider(btn) {
     };
 
     if (btn == 0) {
-        body.style.background = '#849d8f url("img/slider-img/slider-1.png") no-repeat center top';
+    	body.style.background = '#849d8f url("img/slider-img/slider-1.png") no-repeat center top';
       } else if (btn == 1) {
         body.style.background = '#8996a6 url("img/slider-img/slider-2.png") no-repeat center top';
       } else if (btn == 2) {
